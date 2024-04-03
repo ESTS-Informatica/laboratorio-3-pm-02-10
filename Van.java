@@ -5,29 +5,32 @@
  * @author (your name)
  * @version (a version number or a date)
  */
-public class Van
+public class Van extends GroundTransportation
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class Van
-     */
-    public Van()
-    {
-        // initialise instance variables
-        x = 0;
+    private int packages;
+    
+    public Van(String licensePlate, int packages){
+        super(licensePlate);
+        this.packages = packages;
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    
+    public int getPackages(){
+        return packages;
+    }
+    
+    public void setPackages(int packages){
+        this.packages = packages;
+    }
+    
+    public String getLicensePlate(){
+        return super.getLicensePlate();
+    }
+    
+    public void setLicensePlate(String licensePlate){
+        super.setLicensePlate(licensePlate);
+    }
+    
+    public String toString(){
+        return super.toString();
     }
 }

@@ -5,29 +5,42 @@
  * @author (your name)
  * @version (a version number or a date)
  */
-public class Lorry
+public class Lorry extends GroundTransportation
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class Lorry
-     */
-    public Lorry()
-    {
-        // initialise instance variables
-        x = 0;
+    private int numberOfPallets;
+    private int trailers;
+    
+    public Lorry(String licensePlate, int numberOfPallets, int trailers){
+        super(licensePlate);
+        this.numberOfPallets = numberOfPallets;
+        this.trailers = trailers;
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    
+    public int getNumberOfPallets(){
+        return numberOfPallets;
+    }
+    
+    public void setNumberOfPallets(int numberOfPallets){
+        this.numberOfPallets = numberOfPallets;
+    }
+    
+    public int getTrailers(){
+        return trailers;
+    }
+    
+    public void setTrailers(int trailers){
+        this.trailers = trailers;
+    }
+    
+    public String getLicensePlate(){
+        return super.getLicensePlate();
+    }
+    
+    public void setLicensePlate(String licensePlate){
+        super.setLicensePlate(licensePlate);
+    }
+    
+    public String toString(){
+        return super.toString();
     }
 }
