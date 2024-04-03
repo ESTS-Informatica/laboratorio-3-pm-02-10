@@ -30,6 +30,7 @@ public class Van extends GroundTransportation
         super.setLicensePlate(licensePlate);
     }
     
+    @Override
     public String toString(){
         return super.toString();
     }

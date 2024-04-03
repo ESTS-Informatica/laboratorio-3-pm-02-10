@@ -15,12 +15,12 @@ public class AirTransportation extends Transport
         super();
         this.name = name;
         this.numberOfContainers = numberOfContainers;
-        super.setFees(0.04);
+        super.setFees(4.00);
     }
     
     public void setName(String name){
-        if(name!=null)
-            this.name = name;    
+        if(name!=null){
+            this.name = name;}  
     }
     
     public String getName(){
@@ -36,14 +36,15 @@ public class AirTransportation extends Transport
     }
     
     public double getPriceWithFees(){
-        return super.getPrice() * (1.0 + (super.getFees()));
+        return super.getPrice() * (1.0 + (0.01 *super.getFees()));
     }
     
     public String getTransportType(){
         return "Transporte Aéreo";
     }
     
+    @Override
     public String toString(){
-       return super.toString();
+       return super.toString() + "Nome: " + name;
     }
 }

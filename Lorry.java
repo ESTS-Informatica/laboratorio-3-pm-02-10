@@ -40,6 +40,7 @@ public class Lorry extends GroundTransportation
         super.setLicensePlate(licensePlate);
     }
     
+    @Override
     public String toString(){
         return super.toString();
     }
